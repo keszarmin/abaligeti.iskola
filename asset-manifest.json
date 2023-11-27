@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/abaligeti.iskola/static/css/main.9365b819.css",
+    "main.js": "/abaligeti.iskola/static/js/main.ddb552ab.js",
+    "static/js/787.9bd27951.chunk.js": "/abaligeti.iskola/static/js/787.9bd27951.chunk.js",
+    "static/media/iskola_pfp.jpg": "/abaligeti.iskola/static/media/iskola_pfp.e11c6e01d4ad23b7e76b.jpg",
+    "static/media/image045.jpg": "/abaligeti.iskola/static/media/image045.a143cafe7739f219a6a8.jpg",
+    "index.html": "/abaligeti.iskola/index.html",
+    "main.9365b819.css.map": "/abaligeti.iskola/static/css/main.9365b819.css.map",
+    "main.ddb552ab.js.map": "/abaligeti.iskola/static/js/main.ddb552ab.js.map",
+    "787.9bd27951.chunk.js.map": "/abaligeti.iskola/static/js/787.9bd27951.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9365b819.css",
+    "static/js/main.ddb552ab.js"
+  ]
+}
