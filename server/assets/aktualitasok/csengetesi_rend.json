@@ -1,0 +1,10 @@
+{
+    "alsosokak": {
+        "leirás":"Ez a ki irás az alsosósoknak szól",
+        "időtartam":"13:00-14:00"
+    },
+    "felsősöknek": {
+        "leirás":"Ez a ki irás az felsősöknek szól",
+        "időtartam":"15:00-16:00"
+    }
+}
