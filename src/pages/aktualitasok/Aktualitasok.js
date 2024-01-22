@@ -2,31 +2,31 @@ import React from 'react'
 import CalendarPNG from "./calendar.png"
 import RightArrowPNG from "./right_arrow.png"
 import {useState,useEffect} from "react"
-import AktualitasokCsengetesirendCard from './AktualitasokCsengetesirendCard'
+import CalendarCard from './CalendarCard'
+import NewsList from './NewsList'
 
 function Aktualitasok() {
-  const [Url, setUrl] = useState([]);
   const [CalendarUrl, setCalendarUrl] = useState([]);
-
-  const FetchURL = async () => {
-      const response = await fetch("http://localhost:9001/get_path/csengetesi_rend/0");
-      const res = await response.json();
-    
-      setUrl(res);
-  }
+  const [NewsURL, setNewsURL] = useState([]);
 
   const FetchCalendarURL = async () => {
-    const response = await fetch("http://localhost:9001/aktualitasok/calendar");
+    const response = await fetch("http://localhost:9001/get_path/calendar/0");
     const res = await response.json();
 
     setCalendarUrl(res);
   }
 
+  const FetchNewsURL = async () => {
+    const response = await fetch("http://localhost:9001/get_path/news_path/0");
+    const res = await response.json();
+
+    setNewsURL(res.links.reverse());
+  }
+
   useEffect(() => {
     FetchCalendarURL()
-    FetchURL();
+    FetchNewsURL()
   },[])
-
 
   return (
     <div>
@@ -35,24 +35,20 @@ function Aktualitasok() {
         {/** FIXED CALENDAR */}
 
         <div onClick={() => document.getElementById("calendar_content").style.display = "flex"} className='fixed w-[7vh] h-[7vh] bg-red-300 bottom-[1%] right-[1%] rounded-full flex justify-center items-center hover:border-2 hover:border-sky-400'>
-          <img src={CalendarPNG} className='w-[50%]' />
+          <img src={CalendarPNG} className='w-[50%]' alt='' />
         </div>
 
         <div id='calendar_content' className='fixed justify-center items-center w-[30vh] h-[30vh] bg-red-300 hidden bottom-[1%] right-[1%] rounded-2xl'>
           {/** CALENDAR HEADER */}
           <div className='w-[20%] h-full flex justify-center items-center'>
-            <img src={RightArrowPNG} className=' rotate-180 w-[40%] hover:w-[60%] duration-100' onClick={() => document.getElementById("calendar_content").style.display = "none"} /> 
-          </div>
+            <img alt='' src={RightArrowPNG} className=' rotate-180 w-[40%] hover:w-[60%] duration-100' onClick={() => document.getElementById("calendar_content").style.display = "none"} /> 
+          </div> 
           {/** CALENDAR CONTENT */}
           <div className='w-[80%] block'>
-          {
+          { 
             CalendarUrl.map((data,index) => (
-
-              <div key={index} className='w-full h-[15%] mr-auto ml-auto'>    
-                <p>{data.datum}</p>
-                <p>{data.description}</p>
-              </div>
-            ))  
+              <CalendarCard data={data} key={index} />
+            ))
           }
           </div>
         </div>
@@ -87,12 +83,17 @@ function Aktualitasok() {
                 <h1 className="text-[250%] text-white">Hireink</h1>
               </div>
             </div>
-            <div className="w-full block h-max">
               {/** HIREK CONTENT */}
+
+              {
+                NewsURL.map((data,index) => (
+                  <NewsList key={index} data={data} />
+                ))
+              }
               
               {/** END HIREK CONTENT */}
-            </div>
           </div>
+          <hr></hr>
           <div id="programok" className="w-full h-max bg-violet-700">
             <div className="w-full h-[15vh] flex justify-center items-center">
               <div className="w-min h-min">
@@ -110,6 +111,7 @@ function Aktualitasok() {
               {/** END PROGRAMOK CONTENT */}
             </div>
           </div>
+          <hr></hr>
           <div id="csengetesi_rend" className="w-full h-[80%] bg-violet-700 flex justify-center items-center">
             <div className="w-[60%] h-[80%] bg-gray-600 rounded-3xl border-2 border-gray-600">
               <div className="w-full h-[10%] justify-center items-center flex">

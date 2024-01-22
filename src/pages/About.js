@@ -45,6 +45,7 @@ function About() {
               </div>
             </div>
           </div>
+          <hr></hr>
           <div id="bemutatkozas" className="w-full h-[80%] bg-fuchsia-700">
             <div className="w-full h-[20%] flex justify-center items-center">
               <div className="w-min h-min">
@@ -57,6 +58,7 @@ function About() {
               </div>
             </div>
           </div>
+          <hr></hr>
           <div id="tantestulet" className="w-full h-[80%] flex justify-center bg-fuchsia-700 items-center">
             <div className="w-[60%] h-[80%] bg-gray-600 rounded-3xl border-2 border-gray-600">
               <div className="w-full h-[10%] justify-center items-center flex">
@@ -90,6 +92,7 @@ function About() {
               </div>
             </div>
           </div>
+          <hr></hr>
           <div id="iskola_tortenete" className="w-full h-[80%] bg-fuchsia-700">
             <div className="w-full h-[20%] flex justify-center items-center">
               <div className="w-min h-min">
@@ -102,6 +105,7 @@ function About() {
               </div>
             </div>
           </div>
+          <hr></hr>
           <div id="pte_partner_intezmeny" className="w-full h-[80%] bg-fuchsia-700">
             <div className="w-full h-[20%] flex justify-center items-center">
                 <div className="w-max h-min">
@@ -114,6 +118,7 @@ function About() {
                 </div>
               </div>
           </div>
+          <hr></hr>
           <div id="allasajanlat" className="w-full h-[50%] bg-fuchsia-700">
               {/** MAIN TEXT */}
               <div className="w-full h-[20%] flex justify-center items-center">

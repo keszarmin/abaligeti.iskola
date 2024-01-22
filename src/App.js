@@ -1,5 +1,5 @@
 import { BrowserRouter,Route,Routes } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Layout from "./pages/Layout";
 import NoPage from "./pages/NoPage";
 import Contact from "./pages/Contact";
@@ -14,12 +14,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/contact" element={<Contact />} /> 
-          <Route path="/about" element={<About />} />
-          <Route path="/document" element={<Document /> } />
-          <Route path="/aktualitasok" element={<Aktualitasok />} />
-          <Route path="/galeria" element={<Galeria />} />
+          <Route path="/abaligeti.iskola" element={<Home />} />
+          <Route path="/abaligeti.iskola/contact" element={<Contact />} /> 
+          <Route path="/abaligeti.iskola/about" element={<About />} />
+          <Route path="/abaligeti.iskola/document" element={<Document /> } />
+          <Route path="/abaligeti.iskola/aktualitasok" element={<Aktualitasok />} />
+          <Route path="/abaligeti.iskola/galeria" element={<Galeria />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

@@ -55,6 +55,7 @@ return (
               {/** END PP CONTENT */}
             </div>
           </div>
+          <hr></hr>
           <div id="szmsz" className="w-full h-max bg-violet-700">
             <div className="w-full h-[15vh] flex justify-center items-center">
               <div className="w-min h-min">
@@ -69,6 +70,7 @@ return (
               {/** END PROGRAMOK CONTENT */}
             </div>
           </div>
+          <hr></hr>
           <div id="hazirend" className="w-full h-max bg-violet-700 block">
             <div className='mr-auto ml-auto flex justify-center items-center'>
                 <div className="w-min h-min">
@@ -79,6 +81,7 @@ return (
                 <p>  </p>
             </div>
           </div>
+          <hr></hr>
           <div id="munkaterv" className="w-full h-max bg-violet-700">
             <div className="w-full h-[15vh] flex justify-center items-center">
               <div className="w-min h-min">
@@ -94,6 +97,7 @@ return (
                 </div>
             </div>
           </div>
+          <hr></hr>
           <div id="gdpr" className="w-full h-max  bg-violet-700">
             <div className="w-full h-[15vh] flex justify-center items-center">
                 <div className="w-max h-min">
@@ -106,6 +110,7 @@ return (
                 </div>
               </div>
           </div>
+          <hr></hr>
           <div id='letoltheto_document' className="w-full h-max  bg-violet-700">
             <div className="w-full h-[15vh] flex justify-center items-center">
                 <div className="w-max h-min">

@@ -36,3 +36,23 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;;
 }
+
+#MAIN_TEXT {
+    animation: main_text_move linear both;
+    animation-timeline: scroll();
+    height: 100vh;
+}
+
+@keyframes main_text_move {
+    from {
+        height: 100vh;
+        font-size: 480%;
+    }
+    to {
+        height: 20vh;
+        font-size: 350%;   
+    }
+}
+*::-webkit-scrollbar {
+    background-color: transparent;
+}

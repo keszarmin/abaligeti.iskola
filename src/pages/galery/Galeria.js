@@ -18,11 +18,11 @@ function Galeria() {
   },[])
 
   return (
-    <div className='w-full bg-white grid place-items-center overflow-auto'>
+    <div className='w-full h-full bg-white block overflow-auto'>
         {
         Year.map((Data,index) => (
-          <GaleryCards key={index} year={Data} />      
-        ))
+            <GaleryCards key={index} year={Data} />      
+          ))
         }
     </div>
   )

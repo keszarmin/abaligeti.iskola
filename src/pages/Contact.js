@@ -40,6 +40,7 @@ function Contact() {
               {/** END PP CONTENT */}
             </div>
           </div>
+          <hr></hr>
           <div id="szmsz" className="w-full h-max bg-emerald-400">
             <div className="w-full h-[15vh] flex justify-center items-center">
               <div className="w-min h-min">
@@ -54,6 +55,7 @@ function Contact() {
               {/** END PROGRAMOK CONTENT */}
             </div>
           </div>
+          <hr></hr>
           <div id="hazirend" className="w-full h-max bg-emerald-400 block">
             <div className='mr-auto ml-auto flex justify-center items-center'>
                 <div className="w-min h-min">
@@ -64,6 +66,7 @@ function Contact() {
                 
             </div>
           </div>
+          <hr></hr>
           <div id="munkaterv" className="w-full h-max bg-emerald-400">
             <div className="w-full h-[15vh] flex justify-center items-center">
               <div className="w-max h-min">
@@ -79,6 +82,7 @@ function Contact() {
                 </div>
             </div>
           </div>
+          <hr></hr>
           <div id="gdpr" className="w-full h-max  bg-emerald-400">
             <div className="w-full h-[15vh] flex justify-center items-center">
                 <div className="w-max h-min">
