@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/abaligeti.iskola/static/css/main.0489a963.css",
-    "main.js": "/abaligeti.iskola/static/js/main.8fc4b9e0.js",
+    "main.css": "/abaligeti.iskola/static/css/main.f4487151.css",
+    "main.js": "/abaligeti.iskola/static/js/main.44102c40.js",
     "static/js/787.fa6fb87e.chunk.js": "/abaligeti.iskola/static/js/787.fa6fb87e.chunk.js",
     "static/media/iskola_pfp.jpg": "/abaligeti.iskola/static/media/iskola_pfp.e11c6e01d4ad23b7e76b.jpg",
     "static/media/image045.jpg": "/abaligeti.iskola/static/media/image045.a143cafe7739f219a6a8.jpg",
     "index.html": "/abaligeti.iskola/index.html",
-    "main.0489a963.css.map": "/abaligeti.iskola/static/css/main.0489a963.css.map",
-    "main.8fc4b9e0.js.map": "/abaligeti.iskola/static/js/main.8fc4b9e0.js.map",
+    "main.f4487151.css.map": "/abaligeti.iskola/static/css/main.f4487151.css.map",
+    "main.44102c40.js.map": "/abaligeti.iskola/static/js/main.44102c40.js.map",
     "787.fa6fb87e.chunk.js.map": "/abaligeti.iskola/static/js/787.fa6fb87e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0489a963.css",
-    "static/js/main.8fc4b9e0.js"
+    "static/css/main.f4487151.css",
+    "static/js/main.44102c40.js"
   ]
 }
