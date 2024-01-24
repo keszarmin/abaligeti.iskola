@@ -14,19 +14,50 @@ var aktualitasokPATH = path.join(__dirname, "/assets/aktualitasok");
 app.use("/get_documents",express.static(documentPATH));
 app.use('/get_galery', express.static(galeryPATH));
 app.use("/get_aktualitasok", express.static(aktualitasokPATH));
+
 app.get('/get_documents', function (req, res) {
-    console.log("File Sent");
+
+    console.log("\n[0] File Sent succesfully!\n\tpath:/get_documents\n");
     res.send();
 });
 
 app.get("/get_galery",(req,res) => {
-    console.log("File Sent");
+
+    console.log("\n[0] File Sent succesfully!\n\tpath:/get_galery\n");
     res.send();
 });
 
 app.get("/get_aktualitasok",(req,res) => {
-    console.log("File send");
+    console.log("\n[0] File Sent succesfully!\n\tpath:/get_aktualitasok\n");
     res.send();
+})
+
+app.get("/get_connection",(req,res) => {
+    const json_file_data = require("./assets/elerhetosegek/elerhetosegek.json");
+
+    res.json({"data":json_file_data})
+
+    console.log("\n[0] File Sent succesfully!\n\tpath:/get_connection\n");
+})
+
+app.get("/get_home_news",(req,res) => {
+    
+    const last_dir_name = fs.readdirSync(path.join(__dirname,"/assets/aktualitasok")).reverse();
+
+    fs.readdir(path.join(__dirname, `/assets/aktualitasok/${last_dir_name[0]}`),(err,file_name) => {
+        
+        let links = [];
+        for (let i = file_name.length/2;i > 0;i--) {
+            
+            const file_data = fs.readFileSync(`./assets/aktualitasok/${last_dir_name[0]}/${file_name[0]}`,"utf-8")
+
+            links[i-1] = {"src":[{"img_src":`http://localhost:9001/get_aktualitasok/${last_dir_name[0]}/${file_name[1]}`},{"description":file_data}]} 
+        }
+
+        res.send(JSON.stringify(links));
+
+        console.log("\n[0] File Sent succesfully!\n\tpath:/get_home_news\n");
+    })
 })
 
 app.get("/get_path/:kategory/:year",(req,res) => {
@@ -109,24 +140,6 @@ app.get("/get_path/:kategory/:year",(req,res) => {
                 res.send(JSON.stringify(links));
             })
             break;
-            case "home_news":
-            
-            const last_dir_name = fs.readdirSync(path.join(__dirname,"/assets/aktualitasok")).reverse();
-
-            fs.readdir(path.join(__dirname, `/assets/aktualitasok/${last_dir_name[0]}`),(err,file_name) => {
-                
-                let links = [];
-                for (let i = file_name.length/2;i > 0;i--) {
-                    
-                    const file_data = fs.readFileSync(`./assets/aktualitasok/${last_dir_name[0]}/${file_name[0]}`,"utf-8")
-
-                    links[i-1] = {"src":[{"img_src":`http://localhost:9001/get_aktualitasok/${last_dir_name[0]}/${file_name[1]}`},{"description":file_data}]} 
-                }
-
-                res.send(JSON.stringify(links));
-            })
-                
-            break; 
     }
 
 })
